@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alec Designs | Fast, Modern Websites</title>
-    <meta name="description" content="Modern websites delivered fast. Clean, efficient web development by Alec. Available on Fiverr for quick turnaround projects.">
+    <meta name="description" content="Modern websites delivered fast. Clean, efficient web development by Alec. Static sites with fast hosting - no complexity, just results.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -31,8 +31,8 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: radial-gradient(ellipse at top, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
-                        radial-gradient(ellipse at bottom, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+            background: radial-gradient(ellipse at top left, rgba(16, 185, 129, 0.12) 0%, transparent 50%),
+                        radial-gradient(ellipse at bottom right, rgba(59, 130, 246, 0.12) 0%, transparent 50%);
         }
 
         .floating-orbs {
@@ -45,9 +45,8 @@
         .orb {
             position: absolute;
             border-radius: 50%;
-            background: linear-gradient(45deg, rgba(16, 185, 129, 0.3), rgba(59, 130, 246, 0.3));
             filter: blur(1px);
-            animation: float 20s infinite linear;
+            animation: float 30s infinite linear;
         }
 
         .orb:nth-child(1) { 
@@ -60,57 +59,23 @@
         .orb:nth-child(2) { 
             width: 150px; 
             height: 150px; 
-            left: 80%; 
-            animation-delay: -5s;
+            left: 70%; 
+            animation-delay: -10s;
             background: radial-gradient(circle, rgba(59, 130, 246, 0.4), rgba(59, 130, 246, 0.1));
         }
         .orb:nth-child(3) { 
             width: 80px; 
             height: 80px; 
-            left: 40%; 
-            animation-delay: -10s;
+            left: 45%; 
+            animation-delay: -20s;
             background: radial-gradient(circle, rgba(147, 51, 234, 0.4), rgba(147, 51, 234, 0.1));
-        }
-        .orb:nth-child(4) { 
-            width: 120px; 
-            height: 120px; 
-            left: 70%; 
-            animation-delay: -15s;
-            background: radial-gradient(circle, rgba(236, 72, 153, 0.4), rgba(236, 72, 153, 0.1));
-        }
-        .orb:nth-child(5) { 
-            width: 90px; 
-            height: 90px; 
-            left: 20%; 
-            animation-delay: -8s;
-            background: radial-gradient(circle, rgba(34, 197, 94, 0.4), rgba(34, 197, 94, 0.1));
-        }
-        .orb:nth-child(6) { 
-            width: 110px; 
-            height: 110px; 
-            left: 60%; 
-            animation-delay: -12s;
-            background: radial-gradient(circle, rgba(168, 85, 247, 0.4), rgba(168, 85, 247, 0.1));
         }
 
         @keyframes float {
             0% { transform: translateY(100vh) scale(0); opacity: 0; }
             10% { opacity: 1; }
             90% { opacity: 1; }
-            100% { transform: translateY(-100px) scale(1); opacity: 0; }
-        }
-
-        /* Glassmorphism effects */
-        .glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .glass-dark {
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            100% { transform: translateY(-150px) scale(1); opacity: 0; }
         }
 
         /* Navigation */
@@ -120,14 +85,15 @@
             left: 0;
             right: 0;
             z-index: 9999;
-            padding: 1rem 0;
+            padding: 1.25rem 0;
             transition: all 0.3s ease;
         }
 
         nav.scrolled {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.9);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
         }
 
         .nav-container {
@@ -148,36 +114,20 @@
         }
 
         .logo-icon {
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             background: linear-gradient(135deg, #10b981, #3b82f6);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .logo-icon::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
-            transform: translateX(-100%);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            50% { transform: translateX(100%); }
-            100% { transform: translateX(100%); }
+            font-weight: 700;
+            color: #fff;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             align-items: center;
         }
 
@@ -216,8 +166,6 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
         }
 
         .cta-button:hover {
@@ -225,51 +173,38 @@
             box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
         }
 
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
         /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 8rem 2rem 2rem;
-            position: relative;
+            justify-content: center;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
         }
 
         .hero-container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
-            gap: 3rem;
+            gap: 2rem;
         }
 
         .hero-content {
-            z-index: 2;
-            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
         }
 
         .hero-title {
-            font-size: clamp(3rem, 8vw, 6rem);
+            font-size: clamp(3rem, 8vw, 5.5rem);
             font-weight: 300;
             line-height: 1.1;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+            margin: 0;
+            background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.8) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -287,15 +222,16 @@
             font-size: 1.25rem;
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.6;
-            margin-bottom: 3rem;
+            margin: 0;
             max-width: 600px;
         }
 
         .hero-buttons {
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap;
             justify-content: center;
+            flex-wrap: wrap;
+            margin: 1rem 0;
         }
 
         .btn-primary {
@@ -305,47 +241,13 @@
             border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            transform-style: preserve-3d;
-        }
-
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.6s;
-        }
-
-        .btn-primary::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, #059669, #2563eb);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: -1;
+            transition: all 0.3s ease;
+            font-size: 1rem;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.4);
-        }
-
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary:hover::after {
-            opacity: 1;
+            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
         }
 
         .btn-secondary {
@@ -356,117 +258,65 @@
             text-decoration: none;
             font-weight: 600;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
             backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-secondary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.1);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: -1;
+            font-size: 1rem;
         }
 
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.15);
             transform: translateY(-3px);
             border-color: rgba(16, 185, 129, 0.5);
-            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.2);
         }
 
-        .btn-secondary:hover::before {
-            opacity: 1;
-        }
-
-        /* Features Grid */
-        .features-grid {
+        /* Features highlight in hero */
+        .hero-features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            max-width: 600px;
+            margin: 2rem 0 0;
+            width: 100%;
         }
 
-        .feature-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 2rem;
+        .hero-feature {
             text-align: center;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(59, 130, 246, 0.05));
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: -1;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(16, 185, 129, 0.4);
-            box-shadow: 0 25px 50px rgba(16, 185, 129, 0.15);
-        }
-
-        .feature-card:hover::before {
-            opacity: 1;
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #10b981, #3b82f6);
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
             border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-feature-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #10b981, #3b82f6);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            transition: transform 0.3s ease;
+            margin: 0 auto 0.75rem;
         }
 
-        .feature-card:hover .feature-icon {
-            transform: scale(1.1) rotate(5deg);
-        }
-
-        .feature-title {
-            font-size: 1.125rem;
+        .hero-feature h3 {
+            font-size: 0.9rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.25rem;
             color: #fff;
         }
 
-        .feature-description {
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.6;
-            font-size: 0.95rem;
+        .hero-feature p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.4;
         }
 
-        /* Sections */
-        .section {
+        /* Services Section */
+        .services {
             padding: 6rem 2rem;
-            position: relative;
         }
 
-        .section-container {
+        .services-container {
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -477,24 +327,23 @@
         }
 
         .section-title {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             font-weight: 300;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+            background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.8) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .section-subtitle {
-            font-size: 1.125rem;
+            font-size: 1.1rem;
             color: rgba(255, 255, 255, 0.7);
             max-width: 600px;
             margin: 0 auto;
             line-height: 1.6;
         }
 
-        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -507,49 +356,14 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px;
             padding: 2rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.5), transparent);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .service-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(59, 130, 246, 0.05));
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: -1;
+            transition: all 0.3s ease;
+            text-align: left;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(16, 185, 129, 0.4);
-            box-shadow: 0 25px 50px rgba(16, 185, 129, 0.15);
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-card:hover::after {
-            opacity: 1;
+            transform: translateY(-8px);
+            border-color: rgba(16, 185, 129, 0.3);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
         }
 
         .service-icon {
@@ -561,11 +375,6 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover .service-icon {
-            transform: scale(1.1) rotate(5deg);
         }
 
         .service-title {
@@ -578,16 +387,51 @@
         .service-description {
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.6;
+            margin-bottom: 1.5rem;
         }
 
-        /* Pricing Cards */
-        .pricing-grid {
+        .service-features {
+            list-style: none;
+        }
+
+        .service-features li {
             display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        .feature-check {
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(135deg, #10b981, #3b82f6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(59, 130, 246, 0.05));
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
-            align-items: stretch;
-            justify-content: center;
-            flex-wrap: wrap;
         }
 
         .pricing-card {
@@ -597,26 +441,9 @@
             border-radius: 20px;
             padding: 2.5rem;
             position: relative;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            flex: 1;
-            min-width: 300px;
-            max-width: 350px;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
-        }
-
-        .pricing-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: -1;
         }
 
         .pricing-card.featured {
@@ -626,23 +453,14 @@
             box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
         }
 
-        .pricing-card.featured::before {
-            opacity: 1;
-        }
-
         .pricing-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-            border-color: rgba(16, 185, 129, 0.5);
-        }
-
-        .pricing-card:hover::before {
-            opacity: 1;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border-color: rgba(16, 185, 129, 0.4);
         }
 
         .pricing-card.featured:hover {
             transform: translateY(-15px);
-            box-shadow: 0 35px 70px rgba(16, 185, 129, 0.3);
         }
 
         .popular-badge {
@@ -654,8 +472,21 @@
             color: #fff;
             padding: 0.5rem 1rem;
             border-radius: 20px;
-            font-size: 0.875rem;
+            font-size: 0.8rem;
             font-weight: 600;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .pricing-subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
         }
 
         .price {
@@ -668,73 +499,99 @@
             background-clip: text;
         }
 
+        .delivery-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 0.5rem 0 1.5rem;
+        }
+
         .features-list {
             list-style: none;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             flex-grow: 1;
         }
 
         .features-list li {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 0.75rem;
             margin-bottom: 0.75rem;
             color: rgba(255, 255, 255, 0.8);
-            opacity: 0;
-            transform: translateX(-20px);
-            animation: slideInLeft 0.6s ease forwards;
-        }
-
-        .features-list li:nth-child(1) { animation-delay: 0.1s; }
-        .features-list li:nth-child(2) { animation-delay: 0.2s; }
-        .features-list li:nth-child(3) { animation-delay: 0.3s; }
-        .features-list li:nth-child(4) { animation-delay: 0.4s; }
-        .features-list li:nth-child(5) { animation-delay: 0.5s; }
-
-        @keyframes slideInLeft {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            font-size: 0.9rem;
+            line-height: 1.4;
         }
 
         .checkmark {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             background: linear-gradient(135deg, #10b981, #3b82f6);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 12px;
+            font-size: 10px;
             color: #fff;
-            position: relative;
-            overflow: hidden;
             flex-shrink: 0;
+            margin-top: 2px;
         }
 
-        .checkmark::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
+        .pricing-cta {
+            margin-top: 2rem;
+        }
+
+        .pricing-button {
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
             width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transition: left 0.6s;
         }
 
-        .pricing-card:hover .checkmark::before {
-            left: 100%;
+        .pricing-button.primary {
+            background: linear-gradient(135deg, #10b981, #3b82f6);
+            color: #fff;
+        }
+
+        .pricing-button.secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .pricing-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .pricing-button.primary:hover {
+            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+        }
+
+        .pricing-button.secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(16, 185, 129, 0.5);
         }
 
         /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));
-            border-radius: 30px;
-            margin: 2rem;
-            padding: 4rem 2rem;
+        .contact {
+            padding: 6rem 2rem;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));
+            border-radius: 24px;
+            padding: 4rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         /* Footer */
@@ -787,48 +644,89 @@
                 display: none;
             }
 
+            .hero {
+                padding: 6rem 1rem 2rem;
+                min-height: 90vh;
+            }
+
+            .hero-container {
+                max-width: 100%;
+                gap: 1.5rem;
+            }
+
+            .hero-content {
+                gap: 1.5rem;
+            }
+
             .hero-buttons {
-                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin: 1.5rem 0;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+            }
+
+            .hero-features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin-top: 1.5rem;
+            }
+
+            .hero-feature {
+                padding: 0.75rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
             }
 
             .pricing-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .pricing-card {
-                max-width: 100%;
-                min-width: auto;
+                grid-template-columns: 1fr;
             }
 
             .pricing-card.featured {
                 transform: none;
-                margin: 1rem 0;
+                order: -1;
             }
 
-            .pricing-card.featured:hover {
-                transform: translateY(-8px);
+            .services,
+            .pricing,
+            .contact {
+                padding: 4rem 1rem;
             }
 
-            .features-grid {
-                grid-template-columns: 1fr;
+            .contact-container {
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 5rem 1rem 2rem;
             }
 
-            /* Reduce animation intensity on mobile */
-            .service-card:hover,
-            .feature-card:hover,
-            .pricing-card:hover {
-                transform: translateY(-5px);
+            .hero-title {
+                font-size: 2.5rem;
             }
 
-            .service-card:hover .service-icon,
-            .feature-card:hover .feature-icon {
-                transform: scale(1.05) rotate(3deg);
+            .hero-subtitle {
+                font-size: 1.1rem;
             }
 
-            .btn-primary:hover,
-            .btn-secondary:hover {
-                transform: translateY(-2px);
+            .btn-primary,
+            .btn-secondary {
+                padding: 0.875rem 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .hero-features {
+                margin-top: 1rem;
             }
         }
     </style>
@@ -837,9 +735,6 @@
     <!-- Animated background -->
     <div class="animated-bg">
         <div class="floating-orbs">
-            <div class="orb"></div>
-            <div class="orb"></div>
-            <div class="orb"></div>
             <div class="orb"></div>
             <div class="orb"></div>
             <div class="orb"></div>
@@ -871,56 +766,53 @@
                     <span class="highlight">delivered fast</span>
                 </h1>
                 <p class="hero-subtitle">
-                    I build clean, modern websites quickly and efficiently. No lengthy processes, no endless revisions—just high-quality results delivered on time.
+                    Clean, responsive websites built quickly and efficiently. No CMS complexity, no endless revisions—just modern static sites that work perfectly.
                 </p>
                 <div class="hero-buttons">
-                    <a href="https://fiverr.com/your-profile" target="_blank" class="btn-primary">Start a project</a>
-                    <a href="#pricing" class="btn-secondary">View pricing</a>
+                    <a href="https://fiverr.com/your-profile" target="_blank" class="btn-primary">Start a Project</a>
+                    <a href="#pricing" class="btn-secondary">View Pricing</a>
                 </div>
             </div>
             
-            <!-- Features Grid in Hero -->
-            <div class="features-grid fade-in">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="hero-features fade-in">
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">Lightning Fast</h3>
-                    <p class="feature-description">Optimized performance with Core Web Vitals in mind</p>
+                    <h3>Lightning Fast</h3>
+                    <p>(fast))</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">Mobile First</h3>
-                    <p class="feature-description">Perfect experience across all devices and screen sizes</p>
+                    <h3>Mobile Perfect</h3>
+                    <p>Works on every device</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3 class="feature-title">Quick Delivery</h3>
-                    <p class="feature-description">Fast turnaround times without compromising quality</p>
+                    <h3>Quick Delivery</h3>
+                    <p>1-3 day turnaround</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section">
-        <div class="section-container">
+    <section id="services" class="services">
+        <div class="services-container">
             <div class="section-header fade-in">
-                <h2 class="section-title">What I deliver</h2>
+                <h2 class="section-title">What you get</h2>
                 <p class="section-subtitle">
-                    Every project is built with modern technology, clean code, and attention to detail that makes your business stand out.
+                    Every website is custom-designed, mobile-responsive, and optimized for performance. Simple, clean, and professional.
                 </p>
             </div>
 
@@ -928,13 +820,18 @@
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Responsive Design</h3>
+                    <h3 class="service-title">Custom Design</h3>
                     <p class="service-description">
-                        Mobile-first approach ensuring perfect experience across all devices. Your website will look stunning on phones, tablets, and desktop computers.
+                        Every website is designed from scratch to match your brand and goals. No templates, no cookie-cutter solutions.
                     </p>
+                    <ul class="service-features">
+                        <li><span class="feature-check">✓</span> Unique, professional design</li>
+                        <li><span class="feature-check">✓</span> Brand-aligned aesthetics</li>
+                        <li><span class="feature-check">✓</span> Modern, clean layouts</li>
+                    </ul>
                 </div>
 
                 <div class="service-card fade-in">
@@ -943,102 +840,120 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Lightning Performance</h3>
+                    <h3 class="service-title">Fast & Reliable</h3>
                     <p class="service-description">
-                        Optimized for speed and search engines. Fast loading times, clean semantic code, and Core Web Vitals optimization included.
+                        Static websites hosted on Netlify for blazing-fast loading speeds and 99.9% uptime. No slow databases or complex backends.
                     </p>
+                    <ul class="service-features">
+                        <li><span class="feature-check">✓</span> Lightning-fast loading</li>
+                        <li><span class="feature-check">✓</span> Free Netlify hosting setup</li>
+                        <li><span class="feature-check">✓</span> Domain connection included</li>
+                    </ul>
                 </div>
 
                 <div class="service-card fade-in">
                     <div class="service-icon">
                         <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Fast Delivery</h3>
+                    <h3 class="service-title">Simple Integrations</h3>
                     <p class="service-description">
-                        Quick turnaround times without compromising quality. Your website delivered on schedule with clean, maintainable code every time.
+                        Essential integrations that work: contact forms, payment buttons, booking widgets, and social media links. No complex setups.
                     </p>
+                    <ul class="service-features">
+                        <li><span class="feature-check">✓</span> Google Forms / Contact forms</li>
+                        <li><span class="feature-check">✓</span> Calendly, PayPal, Stripe links</li>
+                        <li><span class="feature-check">✓</span> Social media integration</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="section">
-        <div class="section-container">
+    <section id="pricing" class="pricing">
+        <div class="pricing-container">
             <div class="section-header fade-in">
                 <h2 class="section-title">Simple, transparent pricing</h2>
                 <p class="section-subtitle">
-                    Clear, upfront pricing with no hidden fees. You get exactly what's promised, delivered on time.
+                    Clear packages with everything included. No hidden fees, no ongoing costs. Just fast, modern websites.
                 </p>
             </div>
 
             <div class="pricing-grid">
                 <div class="pricing-card fade-in">
-                    <h3 class="service-title">Basic</h3>
+                    <h3 class="pricing-title">Basic</h3>
+                    <p class="pricing-subtitle">Perfect for personal sites and landing pages</p>
                     <div class="price">$100</div>
-                    <p class="service-description">Perfect for personal sites and portfolios</p>
+                    <div class="delivery-badge">Standard delivery</div>
                     
                     <ul class="features-list">
-                        <li><span class="checkmark">✓</span> 1 custom page</li>
-                        <li><span class="checkmark">✓</span> Mobile responsive</li>
-                        <li><span class="checkmark">✓</span> Contact form</li>
-                        <li><span class="checkmark">✓</span> Social media links</li>
-                        <li><span class="checkmark">✓</span> Basic SEO</li>
+                        <li><span class="checkmark">✓</span> 1 custom-designed page (Home or Landing)</li>
+                        <li><span class="checkmark">✓</span> Mobile-friendly, modern design</li>
+                        <li><span class="checkmark">✓</span> Google Forms or Contact Form integration</li>
+                        <li><span class="checkmark">✓</span> Social media & external platform links</li>
+                        <li><span class="checkmark">✓</span> Free Netlify hosting setup</li>
+                        <li><span class="checkmark">✓</span> Domain connection setup (requires client access)</li>
                     </ul>
                     
-                    <a href="https://fiverr.com/your-profile" target="_blank" class="btn-secondary" style="display: block; text-align: center;">Get started</a>
+                    <div class="pricing-cta">
+                        <a href="https://fiverr.com/your-profile" target="_blank" class="pricing-button secondary">Get Started</a>
+                    </div>
                 </div>
 
                 <div class="pricing-card featured fade-in">
                     <div class="popular-badge">Most Popular</div>
-                    <h3 class="service-title">Standard</h3>
+                    <h3 class="pricing-title">Standard</h3>
+                    <p class="pricing-subtitle">Best for small businesses & creators</p>
                     <div class="price">$145</div>
-                    <p class="service-description">Best for small businesses and startups</p>
+                    <div class="delivery-badge">2-3 day delivery</div>
                     
                     <ul class="features-list">
                         <li><span class="checkmark">✓</span> Everything in Basic</li>
-                        <li><span class="checkmark">✓</span> Up to 3 pages</li>
-                        <li><span class="checkmark">✓</span> 1 integration (Calendly, PayPal)</li>
-                        <li><span class="checkmark">✓</span> Advanced animations</li>
-                        <li><span class="checkmark">✓</span> 2-3 day delivery</li>
+                        <li><span class="checkmark">✓</span> Up to 2 custom pages (Home + About/Services)</li>
+                        <li><span class="checkmark">✓</span> 1 extra integration (Calendly, PayPal, YouTube, etc.)</li>
+                        <li><span class="checkmark">✓</span> Enhanced design elements</li>
+                        <li><span class="checkmark">✓</span> Fast delivery (2–3 days)</li>
                     </ul>
                     
-                    <a href="https://fiverr.com/your-profile" target="_blank" class="btn-primary" style="display: block; text-align: center;">Get started</a>
+                    <div class="pricing-cta">
+                        <a href="https://fiverr.com/your-profile" target="_blank" class="pricing-button primary">Get Started</a>
+                    </div>
                 </div>
 
                 <div class="pricing-card fade-in">
-                    <h3 class="service-title">Premium</h3>
+                    <h3 class="pricing-title">Premium</h3>
+                    <p class="pricing-subtitle">Complete online presence for businesses</p>
                     <div class="price">$160</div>
-                    <p class="service-description">Complete business solution</p>
+                    <div class="delivery-badge">1-2 day delivery</div>
                     
                     <ul class="features-list">
                         <li><span class="checkmark">✓</span> Everything in Standard</li>
-                        <li><span class="checkmark">✓</span> Up to 5 pages</li>
-                        <li><span class="checkmark">✓</span> Multiple integrations</li>
-                        <li><span class="checkmark">✓</span> Custom animations</li>
-                        <li><span class="checkmark">✓</span> 1-2 day delivery</li>
+                        <li><span class="checkmark">✓</span> Up to 3 custom pages (Home, About, Services/Contact)</li>
+                        <li><span class="checkmark">✓</span> Multiple integrations (forms, booking, payments, media)</li>
+                        <li><span class="checkmark">✓</span> Polished animations & interactive effects</li>
+                        <li><span class="checkmark">✓</span> Priority delivery (1–2 days)</li>
                     </ul>
                     
-                    <a href="https://fiverr.com/your-profile" target="_blank" class="btn-secondary" style="display: block; text-align: center;">Get started</a>
+                    <div class="pricing-cta">
+                        <a href="https://fiverr.com/your-profile" target="_blank" class="pricing-button secondary">Get Started</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="section-container">
-            <div class="contact-section fade-in">
-                <h2 class="section-title">Ready to start your project?</h2>
-                <p class="section-subtitle">
-                    Let's build something amazing together. Fast delivery, clean code, exactly what you need.
-                </p>
-                <div class="hero-buttons" style="justify-content: center; margin-top: 2rem;">
-                    <a href="https://fiverr.com/your-profile" target="_blank" class="btn-primary">Start a project on Fiverr</a>
-                    <a href="mailto:your-email@example.com" class="btn-secondary">Send a message</a>
-                </div>
+    <section id="contact" class="contact">
+        <div class="contact-container fade-in">
+            <h2 class="section-title">Ready to start your project?</h2>
+            <p class="section-subtitle">
+                Let's build something amazing together. Fast delivery, clean code, exactly what you need.
+            </p>
+            <div class="hero-buttons" style="margin-top: 2rem;">
+                <a href="https://fiverr.com/your-profile" target="_blank" class="btn-primary">Start a Project on Fiverr</a>
+                <a href="mailto:your-email@example.com" class="btn-secondary">Send a Message</a>
             </div>
         </div>
     </section>
@@ -1054,11 +969,11 @@
                 <a href="https://fiverr.com/your-profile" target="_blank">Fiverr</a>
                 <a href="#">LinkedIn</a>
                 <a href="#">Twitter</a>
-                <a href="#">GitHub</a>
+                <a href="#">Portfolio</a>
             </div>
         </div>
         <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);">
-            <p>© 2025 Alec Designs. Crafted with passion.</p>
+            <p>© 2025 Alec Designs. Fast, modern websites delivered.</p>
         </div>
     </footer>
 
@@ -1077,9 +992,9 @@
 
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e: Event) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const href = (this as HTMLAnchorElement).getAttribute('href');
+                const href = this.getAttribute('href');
                 if (href) {
                     const target = document.querySelector(href);
                     if (target) {
@@ -1110,48 +1025,17 @@
             observer.observe(el);
         });
 
-        // Interactive hover effects are now handled by CSS only
-
-        // Add sparkle effect to buttons
-        document.querySelectorAll('.btn-primary, .cta-button').forEach(button => {
-            button.addEventListener('click', function(e: MouseEvent) {
-                const rect = (this as HTMLElement).getBoundingClientRect();
-                const sparkle = document.createElement('div');
-                sparkle.style.position = 'absolute';
-                sparkle.style.left = (e.clientX - rect.left) + 'px';
-                sparkle.style.top = (e.clientY - rect.top) + 'px';
-                sparkle.style.width = '4px';
-                sparkle.style.height = '4px';
-                sparkle.style.background = '#fff';
-                sparkle.style.borderRadius = '50%';
-                sparkle.style.pointerEvents = 'none';
-                sparkle.style.animation = 'sparkle 0.6s ease-out forwards';
-                (this as HTMLElement).appendChild(sparkle);
-                
-                setTimeout(() => sparkle.remove(), 600);
-            });
-        });
-
-        // Add sparkle animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes sparkle {
-                0% { transform: scale(0) rotate(0deg); opacity: 1; }
-                100% { transform: scale(1) rotate(180deg); opacity: 0; }
-            }
-        `;
-        document.head.appendChild(style);
-
-
-
         // Initial animation
         window.addEventListener('load', () => {
-            document.body.style.opacity = '1';
-            document.querySelectorAll('.fade-in').forEach((el, index) => {
-                setTimeout(() => {
-                    el.classList.add('visible');
-                }, index * 100);
-            });
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in').forEach((el, index) => {
+                    setTimeout(() => {
+                        if (el.getBoundingClientRect().top < window.innerHeight) {
+                            el.classList.add('visible');
+                        }
+                    }, index * 150);
+                });
+            }, 200);
         });
     </script>
 </body>
