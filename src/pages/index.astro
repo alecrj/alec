@@ -1,5 +1,6 @@
 ---
 // src/pages/index.astro
+import '../styles/global.css'
 ---
 
 <!DOCTYPE html>
@@ -7,27 +8,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Web Development Services | Your Name</title>
-    <meta name="description" content="Modern, responsive websites built with cutting-edge technology. From landing pages to complete business sites.">
+    <title>Professional Web Development | Modern Digital Solutions</title>
+    <meta name="description" content="Premium web development services. Creating modern, high-performance websites that drive results. Available on Fiverr.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-inter bg-gray-50">
+<body class="font-inter bg-black text-white antialiased">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center space-x-2">
-                    <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg"></div>
-                    <span class="font-bold text-gray-900">WebDev Pro</span>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-white rounded-lg"></div>
+                    <span class="font-semibold text-lg text-white">Studio</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#services" class="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
-                    <a href="#pricing" class="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
-                    <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
-                    <a href="https://fiverr.com/your-profile" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors">
-                        Hire Me on Fiverr
+                    <a href="#work" class="text-gray-400 hover:text-white transition-colors">Work</a>
+                    <a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a>
+                    <a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a>
+                    <a href="https://fiverr.com/your-profile" target="_blank" class="bg-white text-black px-6 py-2.5 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                        Hire Me
                     </a>
                 </div>
             </div>
@@ -35,287 +36,242 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <section class="pt-32 pb-24 px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-8">
-                    <div class="space-y-4">
-                        <div class="inline-flex items-center bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                            ✨ Available for New Projects
-                        </div>
-                        <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                            Modern Websites That 
-                            <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                                Convert
-                            </span>
+                    <div class="space-y-6">
+                        <h1 class="text-5xl lg:text-6xl font-light tracking-tight">
+                            Digital experiences
+                            <span class="block font-medium">that convert</span>
                         </h1>
-                        <p class="text-xl text-gray-600 leading-relaxed">
-                            I create stunning, responsive websites that not only look amazing but drive results for your business. From simple landing pages to complete business solutions.
+                        <p class="text-xl text-gray-400 leading-relaxed max-w-lg">
+                            I craft modern websites and digital products that drive results. Clean code, thoughtful design, measurable impact.
                         </p>
                     </div>
                     
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://fiverr.com/your-profile" target="_blank" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-center transition-all transform hover:scale-105 shadow-lg">
-                            Start Your Project
+                        <a href="https://fiverr.com/your-profile" target="_blank" class="bg-white text-black px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-colors text-center">
+                            Start a project
                         </a>
-                        <a href="#pricing" class="border-2 border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-4 rounded-lg font-semibold text-center transition-colors">
-                            View Pricing
+                        <a href="#pricing" class="border border-gray-700 text-white px-8 py-4 rounded-lg font-medium hover:border-gray-600 transition-colors text-center">
+                            View pricing
                         </a>
-                    </div>
-
-                    <div class="flex items-center space-x-6 text-sm text-gray-600">
-                        <div class="flex items-center space-x-2">
-                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                            <span>Fast Delivery</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                            <span>Modern Tech</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
-                            <span>100% Satisfaction</span>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="relative">
-                    <div class="relative z-10">
-                        <img src="/profile.jpg" alt="Your Name - Web Developer" class="w-80 h-80 rounded-2xl shadow-2xl mx-auto object-cover">
-                        <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
-                            <div class="flex items-center space-x-2">
-                                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                                <span class="text-sm font-medium text-gray-700">Available Now</span>
-                            </div>
-                        </div>
+                    <div class="aspect-square">
+                        <img src="/profile.jpg" alt="Web Developer" class="w-full h-full rounded-2xl object-cover grayscale">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
                     </div>
-                    <div class="absolute top-4 -left-4 w-24 h-24 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20 animate-pulse"></div>
-                    <div class="absolute -bottom-8 left-8 w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-20 animate-pulse delay-1000"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center space-y-4 mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">What I Deliver</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Every website is crafted with attention to detail and modern best practices
+    <section id="services" class="py-24 px-6 lg:px-8 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-3xl lg:text-4xl font-light mb-4">What I deliver</h2>
+                <p class="text-gray-400 text-lg max-w-2xl">
+                    Every project is built with modern technology, clean code, and attention to detail.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="group p-8 rounded-2xl border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all">
-                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Mobile-First Design</h3>
-                    <p class="text-gray-600">Responsive designs that look perfect on every device, from mobile to desktop.</p>
+                    <h3 class="text-xl font-medium">Responsive Design</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Mobile-first approach ensuring perfect experience across all devices and screen sizes.
+                    </p>
                 </div>
 
-                <div class="group p-8 rounded-2xl border border-gray-200 hover:border-purple-300 hover:shadow-xl transition-all">
-                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Lightning Fast</h3>
-                    <p class="text-gray-600">Optimized for speed with modern frameworks and best practices.</p>
+                    <h3 class="text-xl font-medium">Performance</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Optimized for speed and search engines. Fast loading times and clean, semantic code.
+                    </p>
                 </div>
 
-                <div class="group p-8 rounded-2xl border border-gray-200 hover:border-green-300 hover:shadow-xl transition-all">
-                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-6">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">SEO Optimized</h3>
-                    <p class="text-gray-600">Built with SEO best practices to help your site rank higher in search results.</p>
+                    <h3 class="text-xl font-medium">Integration</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Seamless integration with your tools. Forms, payments, booking systems, and analytics.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center space-y-4 mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">Simple, Transparent Pricing</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Choose the perfect package for your needs. All packages include free hosting setup and domain connection.
+    <section id="pricing" class="py-24 px-6 lg:px-8 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-3xl lg:text-4xl font-light mb-4">Simple pricing</h2>
+                <p class="text-gray-400 text-lg max-w-2xl">
+                    Transparent pricing with everything included. Free hosting setup and domain connection.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Basic Package -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-all">
-                    <div class="text-center space-y-4">
-                        <h3 class="text-2xl font-bold text-gray-900">Basic</h3>
-                        <div class="space-y-2">
-                            <div class="text-4xl font-bold text-gray-900">$100</div>
-                            <p class="text-gray-600">Perfect for personal sites</p>
-                        </div>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Basic -->
+                <div class="border border-gray-800 rounded-xl p-8 hover:border-gray-700 transition-colors">
+                    <div class="mb-8">
+                        <h3 class="text-lg font-medium mb-2">Basic</h3>
+                        <div class="text-3xl font-light mb-2">$100</div>
+                        <p class="text-gray-400">Perfect for personal sites</p>
                     </div>
                     
-                    <ul class="space-y-4 mt-8">
+                    <ul class="space-y-3 mb-8">
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-gray-600">1 custom-designed page</span>
+                            <span class="text-gray-300">1 custom page</span>
                         </li>
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-gray-600">Mobile-friendly design</span>
+                            <span class="text-gray-300">Mobile responsive</span>
                         </li>
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-gray-600">Contact form integration</span>
+                            <span class="text-gray-300">Contact form</span>
                         </li>
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-gray-600">Social media links</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-gray-600">Free hosting setup</span>
+                            <span class="text-gray-300">Free hosting setup</span>
                         </li>
                     </ul>
                     
-                    <a href="https://fiverr.com/your-profile" target="_blank" class="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold text-center transition-colors mt-8 block">
-                        Get Started
+                    <a href="https://fiverr.com/your-profile" target="_blank" class="w-full bg-gray-800 hover:bg-gray-700 text-white py-3 px-6 rounded-lg font-medium transition-colors block text-center">
+                        Get started
                     </a>
                 </div>
 
-                <!-- Standard Package -->
-                <div class="bg-white rounded-2xl p-8 border-2 border-blue-500 hover:shadow-xl transition-all relative">
-                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
+                <!-- Standard -->
+                <div class="border border-white/20 rounded-xl p-8 bg-gray-900/50 relative">
+                    <div class="absolute -top-3 left-6">
+                        <span class="bg-white text-black px-3 py-1 rounded text-sm font-medium">Popular</span>
                     </div>
                     
-                    <div class="text-center space-y-4">
-                        <h3 class="text-2xl font-bold text-gray-900">Standard</h3>
-                        <div class="space-y-2">
-                            <div class="text-4xl font-bold text-blue-600">$145</div>
-                            <p class="text-gray-600">Best for small businesses</p>
-                        </div>
+                    <div class="mb-8">
+                        <h3 class="text-lg font-medium mb-2">Standard</h3>
+                        <div class="text-3xl font-light mb-2">$145</div>
+                        <p class="text-gray-400">Best for small businesses</p>
                     </div>
                     
-                    <ul class="space-y-4 mt-8">
+                    <ul class="space-y-3 mb-8">
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-gray-600">Everything in Basic</span>
+                            <span class="text-gray-300">Everything in Basic</span>
                         </li>
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-gray-600">Up to 2 custom pages</span>
+                            <span class="text-gray-300">Up to 2 pages</span>
                         </li>
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-gray-600">1 extra integration</span>
+                            <span class="text-gray-300">1 integration (Calendly, PayPal)</span>
                         </li>
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-gray-600">Fast delivery (2-3 days)</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-gray-600">Calendly/PayPal integration</span>
+                            <span class="text-gray-300">2-3 day delivery</span>
                         </li>
                     </ul>
                     
-                    <a href="https://fiverr.com/your-profile" target="_blank" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold text-center transition-colors mt-8 block">
-                        Get Started
+                    <a href="https://fiverr.com/your-profile" target="_blank" class="w-full bg-white text-black py-3 px-6 rounded-lg font-medium hover:bg-gray-100 transition-colors block text-center">
+                        Get started
                     </a>
                 </div>
 
-                <!-- Premium Package -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-xl transition-all">
-                    <div class="text-center space-y-4">
-                        <h3 class="text-2xl font-bold text-gray-900">Premium</h3>
-                        <div class="space-y-2">
-                            <div class="text-4xl font-bold text-purple-600">$160</div>
-                            <p class="text-gray-600">Complete business solution</p>
-                        </div>
+                <!-- Premium -->
+                <div class="border border-gray-800 rounded-xl p-8 hover:border-gray-700 transition-colors">
+                    <div class="mb-8">
+                        <h3 class="text-lg font-medium mb-2">Premium</h3>
+                        <div class="text-3xl font-light mb-2">$160</div>
+                        <p class="text-gray-400">Complete business solution</p>
                     </div>
                     
-                    <ul class="space-y-4 mt-8">
+                    <ul class="space-y-3 mb-8">
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-gray-600">Everything in Standard</span>
+                            <span class="text-gray-300">Everything in Standard</span>
                         </li>
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-gray-600">Up to 3 custom pages</span>
+                            <span class="text-gray-300">Up to 3 pages</span>
                         </li>
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-gray-600">Multiple integrations</span>
+                            <span class="text-gray-300">Multiple integrations</span>
                         </li>
                         <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-gray-600">Polished animations</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span class="text-gray-600">Priority delivery (1-2 days)</span>
+                            <span class="text-gray-300">1-2 day delivery</span>
                         </li>
                     </ul>
                     
-                    <a href="https://fiverr.com/your-profile" target="_blank" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-lg font-semibold text-center transition-colors mt-8 block">
-                        Get Started
+                    <a href="https://fiverr.com/your-profile" target="_blank" class="w-full bg-gray-800 hover:bg-gray-700 text-white py-3 px-6 rounded-lg font-medium transition-colors block text-center">
+                        Get started
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section id="contact" class="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="space-y-6">
-                <h2 class="text-3xl lg:text-4xl font-bold text-white">Ready to Build Something Amazing?</h2>
-                <p class="text-xl text-blue-100 max-w-2xl mx-auto">
-                    Let's bring your vision to life with a modern, professional website that converts visitors into customers.
+    <!-- Contact Section -->
+    <section class="py-24 px-6 lg:px-8 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="space-y-8">
+                <h2 class="text-3xl lg:text-4xl font-light">Ready to start?</h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Let's discuss your project and create something that drives real results for your business.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://fiverr.com/your-profile" target="_blank" class="bg-white hover:bg-gray-100 text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors">
-                        Start Your Project on Fiverr
+                    <a href="https://fiverr.com/your-profile" target="_blank" class="bg-white text-black px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                        Start a project on Fiverr
                     </a>
-                    <a href="mailto:your-email@example.com" class="border-2 border-white hover:bg-white hover:text-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
-                        Send Direct Message
+                    <a href="mailto:your-email@example.com" class="border border-gray-700 text-white px-8 py-4 rounded-lg font-medium hover:border-gray-600 transition-colors">
+                        Send a message
                     </a>
                 </div>
             </div>
@@ -323,49 +279,39 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center space-y-4">
-                <div class="flex items-center justify-center space-x-2">
-                    <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg"></div>
-                    <span class="font-bold">WebDev Pro</span>
+    <footer class="py-16 px-6 lg:px-8 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="flex items-center space-x-3">
+                    <div class="w-6 h-6 bg-white rounded"></div>
+                    <span class="font-medium">Studio</span>
                 </div>
-                <p class="text-gray-400">Creating modern websites that make an impact.</p>
-                <div class="flex justify-center space-x-6">
+                <div class="flex space-x-6">
                     <a href="https://fiverr.com/your-profile" target="_blank" class="text-gray-400 hover:text-white transition-colors">Fiverr</a>
                     <a href="#" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
                     <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
                 </div>
-                <p class="text-gray-400 text-sm">© 2025 WebDev Pro. All rights reserved.</p>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p class="text-gray-400">© 2025 Studio. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <style>
-        .font-inter {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: .5;
-            }
-        }
-        
-        .animate-pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        
-        .delay-1000 {
-            animation-delay: 1s;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
