@@ -25,7 +25,7 @@
             letter-spacing: -0.01em;
         }
 
-        /* Enhanced animated background */
+        /* Enhanced animated background - FIXED for mobile */
         .animated-bg {
             position: fixed;
             top: 0;
@@ -50,71 +50,161 @@
             position: absolute;
             border-radius: 50%;
             filter: blur(1px);
-            animation: float 30s infinite linear;
             will-change: transform, opacity;
         }
 
+        /* Always visible orbs with staggered animations */
         .orb:nth-child(1) { 
             width: 100px; 
             height: 100px; 
             left: 10%; 
-            animation-delay: 0s;
+            animation: float1 25s infinite linear;
             background: radial-gradient(circle, rgba(16, 185, 129, 0.3), rgba(16, 185, 129, 0.08));
         }
         .orb:nth-child(2) { 
             width: 150px; 
             height: 150px; 
             left: 70%; 
-            animation-delay: -10s;
+            animation: float2 30s infinite linear;
             background: radial-gradient(circle, rgba(59, 130, 246, 0.3), rgba(59, 130, 246, 0.08));
         }
         .orb:nth-child(3) { 
             width: 80px; 
             height: 80px; 
             left: 45%; 
-            animation-delay: -20s;
+            animation: float3 35s infinite linear;
             background: radial-gradient(circle, rgba(147, 51, 234, 0.3), rgba(147, 51, 234, 0.08));
         }
-
-        @keyframes float {
-            0% { transform: translate3d(0, 100vh, 0) scale(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translate3d(0, -150px, 0) scale(1); opacity: 0; }
+        .orb:nth-child(4) { 
+            width: 120px; 
+            height: 120px; 
+            left: 25%; 
+            animation: float4 28s infinite linear;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.25), rgba(16, 185, 129, 0.06));
+        }
+        .orb:nth-child(5) { 
+            width: 90px; 
+            height: 90px; 
+            left: 85%; 
+            animation: float5 32s infinite linear;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.25), rgba(59, 130, 246, 0.06));
         }
 
-        @keyframes floatMobile {
-            0% { transform: translate3d(0, 120vh, 0) scale(0); opacity: 0; }
-            5% { opacity: 1; }
-            95% { opacity: 1; }
-            100% { transform: translate3d(0, -200px, 0) scale(1); opacity: 0; }
+        /* Multiple floating animations with different timings */
+        @keyframes float1 {
+            0% { transform: translate3d(0, 100vh, 0) scale(0.8); opacity: 0.7; }
+            25% { transform: translate3d(20px, 75vh, 0) scale(1); opacity: 1; }
+            50% { transform: translate3d(-10px, 50vh, 0) scale(0.9); opacity: 0.8; }
+            75% { transform: translate3d(15px, 25vh, 0) scale(1.1); opacity: 1; }
+            100% { transform: translate3d(0, -10vh, 0) scale(0.8); opacity: 0; }
         }
 
-        /* Optimize orbs for mobile */
+        @keyframes float2 {
+            0% { transform: translate3d(0, 110vh, 0) scale(0.7); opacity: 0.6; }
+            20% { transform: translate3d(-25px, 80vh, 0) scale(1); opacity: 1; }
+            40% { transform: translate3d(15px, 60vh, 0) scale(0.8); opacity: 0.9; }
+            60% { transform: translate3d(-20px, 40vh, 0) scale(1.2); opacity: 1; }
+            80% { transform: translate3d(10px, 20vh, 0) scale(0.9); opacity: 0.8; }
+            100% { transform: translate3d(0, -15vh, 0) scale(0.7); opacity: 0; }
+        }
+
+        @keyframes float3 {
+            0% { transform: translate3d(0, 105vh, 0) scale(0.9); opacity: 0.8; }
+            30% { transform: translate3d(30px, 70vh, 0) scale(1.1); opacity: 1; }
+            60% { transform: translate3d(-15px, 35vh, 0) scale(0.8); opacity: 0.9; }
+            100% { transform: translate3d(0, -20vh, 0) scale(0.9); opacity: 0; }
+        }
+
+        @keyframes float4 {
+            0% { transform: translate3d(0, 115vh, 0) scale(0.6); opacity: 0.5; }
+            15% { transform: translate3d(-20px, 85vh, 0) scale(1); opacity: 1; }
+            45% { transform: translate3d(25px, 55vh, 0) scale(0.9); opacity: 0.8; }
+            75% { transform: translate3d(-10px, 25vh, 0) scale(1.1); opacity: 1; }
+            100% { transform: translate3d(0, -25vh, 0) scale(0.6); opacity: 0; }
+        }
+
+        @keyframes float5 {
+            0% { transform: translate3d(0, 95vh, 0) scale(0.8); opacity: 0.6; }
+            35% { transform: translate3d(20px, 65vh, 0) scale(1); opacity: 1; }
+            70% { transform: translate3d(-30px, 30vh, 0) scale(0.8); opacity: 0.9; }
+            100% { transform: translate3d(0, -30vh, 0) scale(0.8); opacity: 0; }
+        }
+
+        /* Mobile optimizations */
         @media (max-width: 768px) {
             .orb {
                 filter: blur(0.5px);
-                animation: floatMobile 25s infinite linear;
             }
             
             .orb:nth-child(1) { 
                 width: 120px; 
                 height: 120px; 
-                animation-delay: -5s;
+                animation: floatMobile1 20s infinite linear;
                 background: radial-gradient(circle, rgba(16, 185, 129, 0.25), rgba(16, 185, 129, 0.06));
             }
             .orb:nth-child(2) { 
                 width: 160px; 
                 height: 160px; 
-                animation-delay: -15s;
+                animation: floatMobile2 25s infinite linear;
                 background: radial-gradient(circle, rgba(59, 130, 246, 0.25), rgba(59, 130, 246, 0.06));
             }
             .orb:nth-child(3) { 
                 width: 100px; 
                 height: 100px; 
-                animation-delay: -10s;
+                animation: floatMobile3 22s infinite linear;
                 background: radial-gradient(circle, rgba(147, 51, 234, 0.25), rgba(147, 51, 234, 0.06));
             }
+            .orb:nth-child(4) { 
+                width: 110px; 
+                height: 110px; 
+                animation: floatMobile4 18s infinite linear;
+                background: radial-gradient(circle, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.05));
+            }
+            .orb:nth-child(5) { 
+                width: 90px; 
+                height: 90px; 
+                animation: floatMobile5 24s infinite linear;
+                background: radial-gradient(circle, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.05));
+            }
+        }
+
+        @keyframes floatMobile1 {
+            0% { transform: translate3d(0, 100vh, 0) scale(0.8); opacity: 0.8; }
+            25% { transform: translate3d(15px, 75vh, 0) scale(1); opacity: 1; }
+            50% { transform: translate3d(-10px, 50vh, 0) scale(0.9); opacity: 0.9; }
+            75% { transform: translate3d(10px, 25vh, 0) scale(1.1); opacity: 1; }
+            100% { transform: translate3d(0, -10vh, 0) scale(0.8); opacity: 0; }
+        }
+
+        @keyframes floatMobile2 {
+            0% { transform: translate3d(0, 110vh, 0) scale(0.7); opacity: 0.7; }
+            20% { transform: translate3d(-20px, 80vh, 0) scale(1); opacity: 1; }
+            40% { transform: translate3d(10px, 60vh, 0) scale(0.8); opacity: 0.9; }
+            60% { transform: translate3d(-15px, 40vh, 0) scale(1.2); opacity: 1; }
+            80% { transform: translate3d(5px, 20vh, 0) scale(0.9); opacity: 0.8; }
+            100% { transform: translate3d(0, -15vh, 0) scale(0.7); opacity: 0; }
+        }
+
+        @keyframes floatMobile3 {
+            0% { transform: translate3d(0, 105vh, 0) scale(0.9); opacity: 0.8; }
+            30% { transform: translate3d(20px, 70vh, 0) scale(1.1); opacity: 1; }
+            60% { transform: translate3d(-10px, 35vh, 0) scale(0.8); opacity: 0.9; }
+            100% { transform: translate3d(0, -20vh, 0) scale(0.9); opacity: 0; }
+        }
+
+        @keyframes floatMobile4 {
+            0% { transform: translate3d(0, 95vh, 0) scale(0.6); opacity: 0.6; }
+            20% { transform: translate3d(-15px, 75vh, 0) scale(1); opacity: 1; }
+            50% { transform: translate3d(20px, 45vh, 0) scale(0.9); opacity: 0.8; }
+            80% { transform: translate3d(-5px, 15vh, 0) scale(1.1); opacity: 1; }
+            100% { transform: translate3d(0, -25vh, 0) scale(0.6); opacity: 0; }
+        }
+
+        @keyframes floatMobile5 {
+            0% { transform: translate3d(0, 90vh, 0) scale(0.8); opacity: 0.7; }
+            35% { transform: translate3d(15px, 60vh, 0) scale(1); opacity: 1; }
+            70% { transform: translate3d(-25px, 25vh, 0) scale(0.8); opacity: 0.9; }
+            100% { transform: translate3d(0, -30vh, 0) scale(0.8); opacity: 0; }
         }
 
         /* Navigation */
@@ -883,6 +973,8 @@
     <!-- Animated background -->
     <div class="animated-bg">
         <div class="floating-orbs">
+            <div class="orb"></div>
+            <div class="orb"></div>
             <div class="orb"></div>
             <div class="orb"></div>
             <div class="orb"></div>
